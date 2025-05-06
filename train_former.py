@@ -113,6 +113,11 @@ parser.add_argument('--gpu', type=int, default=0, help='gpu')
 parser.add_argument('--use-multi-gpu', action='store_true', help='use multiple gpus', default=False)
 parser.add_argument('--devices', type=str, default='0,1', help='device ids of multi gpus')
 
+parser.add_argument('--down_sampling_method', type=str, default='avg', 
+                    help='downsampling method [max, avg, conv]')
+parser.add_argument('--num_class', type=int, default=None,
+                    help='number of classes for classification task')
+
 args = parser.parse_args()
 print(' '.join(sys.argv))
 experiment_id = int(SystemRandom().random() * 10000000)
