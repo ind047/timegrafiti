@@ -209,7 +209,7 @@ class Exp_Main():
         TRAIN_LOADER = TASK.get_dataloader((self.args.fold, "train"), **dloader_config_train)
         VALID_LOADER = TASK.get_dataloader((self.args.fold, "valid"), **dloader_config_infer)
         TEST_LOADER = TASK.get_dataloader((self.args.fold, "test"), **dloader_config_infer)
-        pdb.set_trace()
+        # pdb.set_trace()
         # EVAL_LOADERS = {"train": INFER_LOADER, "valid": VALID_LOADER, "test": TEST_LOADER}
 
         return TRAIN_LOADER, VALID_LOADER, TEST_LOADER
@@ -270,7 +270,7 @@ class Exp_Main():
 
     def train(self):
         train_loader, vali_loader, test_loader = self._get_data()
-        pdb.set_trace()
+        # Removing debugging breakpoint
 
         path = 'saved_models/'+str(self.args.experiment_id)
         time_now = time.time()
